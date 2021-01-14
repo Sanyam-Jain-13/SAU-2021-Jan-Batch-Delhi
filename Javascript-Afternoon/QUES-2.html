@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script>
+        function evenNo()
+        {   
+            resetColor();
+            var ele = document.getElementsByClassName("oddEven");
+            for(var i=0; i<ele.length; i++)
+            {
+                var num = ele[i].innerText;
+                num = parseInt(num);
+                if(num%2 == 0)
+                {
+                    //if(ele[i].style.backgroundColor == "lightgreen") ele[i].style.backgroundColor = "";
+
+                    ele[i].style.backgroundColor ="lightgreen";
+                }
+            }
+        }
+
+        function resetColor()
+        {   
+            var ele = document.getElementsByClassName("oddEven");
+            for(var i=0; i<ele.length; i++)
+            {
+                ele[i].style.backgroundColor = "";    
+            }
+        }
+
+        function colorFive()
+        {
+            resetColor();
+            var ele = document.getElementsByClassName("oddEven");
+            for(var i=0; i<ele.length; i++)
+            {
+
+                var num = ele[i].innerText;
+                num = parseInt(num);
+                if(num%5 == 0)
+                {
+                    //if(ele[i].style.backgroundColor == "yellow") ele[i].style.backgroundColor = "";
+
+                    ele[i].style.backgroundColor ="yellow";
+                }
+            }
+        }
+
+
+    </script>
+</head>
+<style>
+    
+    .oddEven
+    {
+        width: 520px;
+        padding: 1px;
+        background-color: #f1f1f1;
+        text-align: center;
+        box-shadow: 2px 2px 9px grey;
+        font-family: roboto;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div class="container">
+    
+    <h2 class="text-center bg-light">Lets play a game!</h2>
+    <div class="d-flex flex-column mt-4">
+        
+        <div class="oddEven col-md-3 mx-auto">1</div>
+        <div class="oddEven col-md-3 mx-auto">2</div>
+        <div class="oddEven col-md-3 mx-auto">3</div>
+        <div class="oddEven col-md-3 mx-auto">4</div>
+        <div class="oddEven col-md-3 mx-auto">5</div>
+        <div class="oddEven col-md-3 mx-auto">6</div>
+        <div class="oddEven col-md-3 mx-auto">7</div>
+        <div class="oddEven col-md-3 mx-auto">8</div>
+        <div class="oddEven col-md-3 mx-auto">9</div>
+        <div class="oddEven col-md-3 mx-auto">10</div>
+        <div class="oddEven col-md-3 mx-auto">11</div>
+        <div class="oddEven col-md-3 mx-auto">12</div>
+        <div class="oddEven col-md-3 mx-auto">13</div>
+        <div class="oddEven col-md-3 mx-auto">14</div>
+        <div class="oddEven col-md-3 mx-auto">15</div>
+        <div class="oddEven col-md-3 mx-auto">16</div>
+        <div class="oddEven col-md-3 mx-auto">17</div>
+        <div class="oddEven col-md-3 mx-auto">18</div>
+        <div class="oddEven col-md-3 mx-auto">19</div>
+        <div class="oddEven col-md-3 mx-auto">20</div>
+
+        <div class="d-flex flex row justify-content-center m-4">
+            <button class="btn btn-success col-md-3 mx-1" onclick="evenNo()">Even Highlight</button>
+            <button class="btn btn-warning col-md-3 mx-1" onclick="colorFive()">Highlight Five</button>
+            <button class="btn btn-primary col-md-3 mx-1" onclick="resetColor()">Reset</button>
+        </div>    
+
+    </div>
+</div>    
+</body>
+</html>
