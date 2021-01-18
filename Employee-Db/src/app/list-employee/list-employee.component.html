@@ -1,0 +1,21 @@
+<!-- <p>list-employee works!</p> -->
+
+
+
+<div class="container" style="font-family: roboto">
+  <div  class="text-center bg-light font-weight-bold mt-4 py-3"
+  style="font-size: 30px;  ;box-shadow: 2px 1px 10px gray;">
+    EMPLOYEE'S LIST <i class="fas fa-list-ul"></i>
+  </div>
+  <div class="list-group text-uppercase">
+    <div class="list-group-item list-group-item-action small
+    font-weight-bold my-auto d-flex justify-content-between text-center" *ngFor="let emp Of employees; let indexOfEmp=index">
+      <div class="col-md-2 text-secondary"><i class="fas fa-id-badge"></i> &nbsp; {{emp.empid}}</div>
+      <div class="col-md-2"><i class="fas fa-file-signature"></i> &nbsp; {{emp.name}}</div>
+      <div class="col-md-2"><i class="fas fa-map-marker-alt"></i> &nbsp;  {{emp.address}}</div>
+      <div class="col-md-2"><i class="far fa-calendar-alt"></i> &nbsp;  {{emp.dob}}</div>
+      <button class="btn btn-danger" (click)="deleteEmployee(indexOfEmp)">Delete</button>
+      <button class="btn btn-info" [routerLink]="['../employeeForm',indexOfEmp]">Update</button>
+    </div>
+  </div>
+</div>
