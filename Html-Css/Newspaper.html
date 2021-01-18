@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- Newspaper.html Css -->
+    <link rel="stylesheet" href="Newspaper.css">
+    
+    
+</head>
+<body>
+    
+    <!-- Main Heading With Image Sliding-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide d-flex flex-row justify-content-center align-items-center text-center" 
+    data-ride="carousel" data-interval = "3000">
+        
+        <div class="logo-heading col-md-12">
+            <div>Accolite Times</div>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="Assets/Header.jpg" class="bg-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Assets/News2.jpeg" class="bg-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Assets/News3.jpg" class="bg-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Assets/News4.jpeg" class="bg-img" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Assets/News5.jpg" class="bg-img" alt="...">
+          </div>
+        </div>
+
+    </div>
+    
+    <!-- Company Name, User Name ,Date -->
+    <div>
+
+      <div class="bg-light d-flex flex-row justify-content-between px-3 py-1"
+      style="font-family: roboto; font-weight: bold; color:grey; letter-spacing: 2px; box-shadow: 2px 4px 8px silver; font-size: 18px;">
+        <div><span>&#169;</span> AccoliteDigital.com</div>
+        <div> <i class="fas fa-user"></i> Hello, Sanyam Jain</div>
+        <div id="currentDate"></div>
+      </div>
+
+      <!-- Javascript to fetch today's date -->
+      <script>
+      
+        var d = new Date();
+        document.getElementById("currentDate").innerHTML ='<i class="fas fa-calendar-day"></i> ' +d.toLocaleDateString();
+      
+      </script>
+
+    </div>
+
+    <!-- Horizontal Line -->
+    <hr style="border: 5px solid grey;">
+
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <!-- Featured News Section -->
+    <div class="d-flex flex-row flex-wrap my-auto mt-3 bg-light">
+
+        <!-- Newspaper gif -->
+        <div class="col-md-3 my-auto">
+          <img src="Assets/reading_news.gif" class="img-fluid" alt="Reading newspaper gif">
+        </div>
+
+        <!-- Todays featured news -->
+        <div  class="d-flex justify-content-center align-items-center flex-column col-md-9">
+          <div class="col-md-5 text-center py-2" id="featureNewsHead"><i class="fas fa-newspaper"></i> FEATURED NEWS</div>
+
+          <article class="col-md-8 my-3 px-3 py-2 text-justify" id="articleTextBox">
+            Delhi on Friday recorded 295 fresh COVID-19 infections, the lowest in more than eight months, 
+            which pushed the caseload to 6,31,884 while the positivity rate slipped to 0.44 percent, authorities 
+            said.
+          </article>
+          
+          <div>
+            <img src="Assets/covid1.jpg" class="img-fluid"/>
+          </div>
+        </div>
+
+    </div>
+
+    <!-- Horizontal line -->
+    <hr style="border: 5px solid grey;">
+
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- News Articles Section -->
+    <div class="d-flex flex-row mt-3 flex-wrap justify-content-around" style="font-family: roboto;">
+
+        <!-- Article 1 -->
+        <section class="col-md-3 newsBox">
+          
+          <!-- News Heading -->
+          <div class="newsHeading">
+            COVID-19 vaccination at 81 locations in Delhi for 4 days every week
+          </div>
+
+          <!-- Image for the news -->
+          <div class="newsImg">
+            <img src="Assets/covid2.jpg" alt="vaccination" class="img-fluid">
+          </div>
+
+          <!-- Text Realted to the news -->
+          <div class="newsText col-md-11 bg-light">
+            Delhi Chief Minister Arvind Kejriwal on Thursday announced that COVID-19 vaccination will be conducted at 
+            81 centre across the national capital on January 16. He added that the number of 
+            centres will be increased to 175 in a few days andthen to 1000 centres across Delhi.
+
+            <br>
+            "Vaccination will begin with 81 centres, it will then be increased to 175 in a few days and then to 1
+            000 centres across Delhi," said Kejriwal.
+            <br>
+            As many as 100 people will be vaccinated at each of these locations per day as per the guidelines released 
+            by the Centre, Arvind Kejriwal announced while addressing a virtual press conference. Vaccination will be done 
+            on four days a week: Monday, Tuesday, Thursday & Saturday, he added.
+          </div>
+        </section>
+
+
+        <!-- Article 2 -->
+        <section class="col-md-3 newsBox">
+          <div class="newsHeading">
+            $680 million project afoot to redevelop New Delhi station, Railways woos global investors
+          </div>
+          
+          <div class="newsText col-md-11 bg-light">
+            The work for the redevelopment of New Delhi railway station is in full swing with the Railway Land Development 
+            Authority organising virtual roadshows for global stakeholders to engage them in various aspects of the project.
+            <br>
+            Infrastructure majors such as Adani, GMR, JKB Infra, France’s SNCF, Arabian Construction Company and Anchorage had 
+            taken part in the project’s pre-bid meeting held in September 2020. As per the estimate by Railways, 
+            the project is going to involve a $680 million investment and is slated to be completed in four years after the 
+            work is awarded.
+            <br>
+            <div class="newsImg">
+              <img src="Assets/Station.jpg" alt="vaccination" class="img-fluid">
+            </div>
+            The roadshows are being held between January 14 and 19 and prospective investors and developers from various 
+            countries and cities such as Singapore, Australia, Dubai and Spain will be engaged in discussions about the project 
+            concept and the proposed transaction structure with potential bidders.
+          </div>
+        </section>
+        
+
+
+        <!-- Article 3 -->
+        <section class="col-md-3 newsBox">
+          <div class="newsHeading">
+              PM Narendra Modi to flag off trains to Statue of Unity from Delhi, Mumbai, Ahmedabad, key locations
+          </div>
+          <div class="newsImg">
+            <img src="Assets/NarendraModi.jpg" alt="vaccination" class="img-fluid">
+          </div>
+          <div class="newsText col-md-11 bg-light">
+            Indian Railways Trains to Statue of Unity from Ahmedabad, Delhi, Mumbai: People from Delhi can board the Indian 
+            Railways train from Hazrat Nizamuddin railway station (NZM). 
+            In Mumbai, passengers can board the Indian Railways train to the Statue of Unity from Dadar railway station (DDR).
+            <br>
+            Indian Railways passengers from across India can now travel to the Statue of Unity as Prime Minister Narendra 
+            Modi will be flagging off as many as eight trains to the world’s tallest statue located in Gujarat on Sunday. 
+            People can now board trains from Delhi, Mumbai, Chennai, Ahmedabad, Varanasi, Uttar Pradesh’s Pratapgarh, and 
+            Madhya Pradesh’s Rewa. Apart from flagging off trains, PM Modi will be inaugurating several projects on the same 
+            day.
+
+
+          </div>
+        </section>
+
+
+
+        <!-- Article 4 -->
+        <section class="col-md-3 newsBox">
+          <div class="newsHeading">
+            Covid vaccination in India: Can you download CoWIN and self-register for vaccine dose?
+          </div>
+          <div class="newsImg">
+            <img src="Assets/covid3.jpg" alt="vaccination" class="img-fluid">
+          </div>
+          <div class="newsText col-md-11 bg-light">
+            India started its Covid-19 vaccination drive on Saturday with healthcare workers getting vaccinated in the first
+            phase. More than three crore healthcare and frontline workers will be immunized during the first phase of Covid-19 
+            vaccination drive and the technology 
+            partner that will support the exercise at the digital front is the Covid Vaccine Intelligence Network or Co-WIN 
+            application.
+            <br>
+            The software will monitor the inoculation drive and track the beneficiaries of the vaccination. 
+            It will facilitate real-time information about vaccine storage temperature, stocks etc. 
+            But the Co-WIN app is not available on either Android or Apple app stores to download which means one cannot 
+            get registered for the vaccine shot until further announcement.
+          </div>
+        </section>
+        
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+
+        
+    </div>
+
+  </body>
+
+</html>
