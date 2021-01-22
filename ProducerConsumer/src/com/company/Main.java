@@ -94,7 +94,7 @@ public class Main {
         // t1 finishes before t2 t1.join();
 
         Producer.join();
-        //Consumer.join();
+        Consumer.join();
 
     }
 }
