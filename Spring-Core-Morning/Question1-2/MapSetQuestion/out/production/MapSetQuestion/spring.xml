@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="setmap" class="com.springMapSet.SetMap">
+        <property name="id" value="${setmap.id}"/>
+        <property name="mapObj" >
+            <map>
+                <entry key='${key1}'  value="${value1}"> </entry>
+                <entry key='${key2}'  value="${value2}"> </entry>
+                <entry key='${key3}'  value="${value3}"> </entry>
+            </map>
+        </property>
+        <property name="mapOfPoint" >
+            <map>
+                <entry key='Point1'  value-ref="PointA"/>
+                <entry key='Point2'  value-ref="PointB"/>
+            </map>
+        </property>
+        <property name="setObj">
+            <set>
+               <value>${setitem1}</value>
+               <value>${setitem2}</value>
+               <value>${setitem3}</value>
+            </set>
+        </property>
+        <property name="setOfPoints">
+            <set>
+                <ref bean = "PointA"/>
+                <ref bean = "PointB"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="PointA" class="com.springMapSet.Point">
+        <property name="x" value="${pointA.pointX}"/>
+        <property name="y" value="${pointA.pointY}"/>
+    </bean>
+
+    <bean id="PointB" class="com.springMapSet.Point">
+        <property name="x" value="${pointB.pointX}"/>
+        <property name="y" value="${pointB.pointY}"/>
+    </bean>
+
+<!--     Externalize properties-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="src/mapSetConfig.properties">
+        </property>
+    </bean>
+
+</beans>
