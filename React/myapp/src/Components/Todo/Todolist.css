@@ -1,0 +1,15 @@
+.button
+{   
+    width: 90px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px grey;
+    padding: 2px;
+    margin: 5px;
+}
+
+.Item
+{
+    /* height: 200px; */
+    box-shadow: 2px 2px 5px grey;
+
+}
