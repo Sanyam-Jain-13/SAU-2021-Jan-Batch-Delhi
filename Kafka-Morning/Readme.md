@@ -1,5 +1,5 @@
-```(FOR MAC)```
-## First Move into the Kafka Repository in your System & then run these Commands```
+```FOR MAC USERS```
+## First Move into the Kafka Repository in your System & then run these Commands
 
 ## To Start Zoo-Server :
 sh bin/zookeeper-server-start.sh config/zookeeper.properties
